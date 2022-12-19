@@ -15,7 +15,10 @@ class cesiumUtils{
             timeline: false, // 去掉时间线
             fullscreenButton: false, // 去掉全屏按钮
             selectionIndicator: false, // 去掉选择指示器
-            vrButton: true
+            vrButton: true,
+            imageryProvider: new Cesium.TileMapServiceImageryProvider({ // 使用请求量少的图片瓦片地图提供者减少不必要的底图请求，避免网络不好时导致整个地球出不来
+                url: Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII")
+            })
       });
       (this.viewer.cesiumWidget.creditContainer as HTMLDivElement).style.display = 'none'; // 去掉cesium的左下角logo区域
     }
