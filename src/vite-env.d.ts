@@ -6,5 +6,5 @@ declare module '*.vue' {
   export default component
 }
 interface Window {
-  
+  CESIUM_BASE_URL: string
 }
